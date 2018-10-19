@@ -33,19 +33,19 @@ public class Conexao
 		
 		System.out.println("informe o nome do cliente - SOMENTE LETRAS");/////////////Solicita
 		String nome = name.nextLine();
-		
+		int app = 1;
 		
 		System.out.println("Informe o Saldo - SOMENTE NUMEROS");//////////////////////Solicita
 		Scanner s_saldo1 = new Scanner(System.in);
 		Double saldo1 = s_saldo1.nextDouble();
 		
 		Connection conn = null; //Preparando a variavel da conexao.
-		
+		String nula = "null";
 		try 
 		{
 			
 			conn = DriverManager.getConnection(url, user, password);
-			String sql = "INSERT INTO cliente2 (nome,saldo,d_data) VALUES ('" + nome + "','" + saldo1 + "','"+ d_data +"')";  
+			String sql = "INSERT INTO cliente2 (nome,saldo,d_data,app) VALUES ('" + nome + "','" + saldo1 + "','"+ d_data +"','" + app +"')";  
 			PreparedStatement statement = conn.prepareStatement(sql);  
 		  
 		    statement.executeUpdate(sql);
