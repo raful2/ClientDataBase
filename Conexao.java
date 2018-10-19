@@ -279,13 +279,8 @@ public void alterar()
 		}
 		
 		
-		
-	
-		
-		
 }catch(SQLException e) {
 	System.out.println("Erro " + e.getMessage());
 }
-
 }
 }
